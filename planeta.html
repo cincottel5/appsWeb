@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planetas</title>
+        <meta charset="utf-8">    
+
+        <script>
+
+            window.onload = init;
+
+            function init() {
+                var planet = document.getElementById("planeta-verde");
+                planet.innerHTML = "Alerta Roja: tenemos un incendio";
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Planeta Verde</h2>    
+        <p id="planeta-verde">Todo bien</p>
+        <h2>Planeta Rojo</h2>
+        <p id="planeta-rojo">Nada que reportar</p>
+        <h2>Planeta azul</h2>
+        <p id="planeta-azul">Todos los sistemas funcionan bien</p>
+    </body>
+</html>
