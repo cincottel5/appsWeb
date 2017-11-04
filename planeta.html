@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Planetas de colores</title>
-        <meta charset="utf-8">    
-
+        <title>Eventos</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
+            $(function(){
+                $("p").on({
+                    mouseenter: function(){
+                        $(this).css("background", "red");
+                    },
+                    mouseleave: function(){
+                        $(this).css("background", "blue");
+                    },
+                    click: function(){
+                        $(this).css("background", "green");
+                    }
 
-            window.onload = init;
-
-            function init() {
-                var planet = document.getElementById("planeta-verde");
-                planet.innerHTML = "Alerta Roja: tenemos un incendio";
-            }
+                })
+            });
         </script>
     </head>
     <body>
-        <h2>Planeta Verde</h2>    
-        <p id="planeta-verde">Todo bien</p>
-        <h2>Planeta Rojo</h2>
-        <p id="planeta-rojo">Nada que reportar</p>
-        <h2>Planeta azul</h2>
-        <p id="planeta-azul">Todos los sistemas funcionan bien</p>
+        <p>Click o mover el mouse sobre este parrafo</p>
     </body>
 </html>
